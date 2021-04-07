@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+}
+#stock {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#stock td, #stock th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#stock tr:nth-child(even){background-color: #f2f2f2;}
+
+#stock tr:hover {background-color: #ddd;}
+
+#stock thead th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #3d93ee;
+  color: white;
+}
+
+#stock tfoot th {
+  background-color: #2b2b2b;
+  color: white;
+}
+
+thead > * {
+  cursor: pointer;
+}
+
+#list-column {
+
+}
+
+.table-sortable th {
+  cursor: pointer;
+  user-select: none;
+}
+
+.table-sortable .th-sort-asc::after {
+  content: "\25b4" !important;
+}
+
+.table-sortable .th-sort-desc::after {
+  content: "\25be" !important;
+}
+
+.table-sortable .th-sort-asc::after,
+.table-sortable .th-sort-desc::after {
+  margin-left: 5px;
+}
+
+.table-sortable .th-sort-asc,
+.table-sortable .th-sort-desc {
+  background-color: rgba(36, 112, 198, 0.9) !important;
+}

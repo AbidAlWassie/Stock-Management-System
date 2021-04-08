@@ -27,17 +27,10 @@ $id = $_GET['id'];
     width: 250px;
     }
   </style>
-  <title>Insert Database</title>
-
   <title>Modify</title>
 </head>
 <body>
 
-<nav class="navbar">
-  <h3><a href="stock-table.php">Stock</a></h3>
-  <h3></h3>
-  <h3></h3>
-</nav>
 
 
   <form action="" method="GET">

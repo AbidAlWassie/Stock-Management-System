@@ -13,6 +13,17 @@
     #btnSubmit {
     width: 250px;
     }
+
+    .navbar a {
+      font-size: 20px;
+      text-decoration: none;
+      padding: 0 10px;
+      color: black;
+    }
+
+    .danger {
+      color: red !important;
+    }
   </style>
   <title>Insert Database</title>
 
@@ -21,9 +32,9 @@
 <body>
 
 <nav class="navbar">
-  <h3><a href="stock-table.php">Stock</a></h3>
-  <h3></h3>
-  <h3></h3>
+  <a href="stock-table.php">Stock</a>
+  <a href="insert.php">Insert</a>
+  <a class="danger" href="delete-page.php">Delete</a>
 </nav>
 
 

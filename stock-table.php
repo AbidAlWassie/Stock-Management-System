@@ -25,6 +25,7 @@
       <th>Price</th>
       <th>Quantity</th>
       <th>Product ID</th>
+      <th>Options</th>
     </tr>
   </thead>
 
@@ -43,12 +44,13 @@
           "
           <tr>
           <td>".$result['Brand']."</td>
-          <td>".$result['Product Name']."</td>
+          <td>".$result['Product_Name']."</td>
           <td>".$result['Color']."</td>
           <td>".$result['Size']."</td>
           <td>".$result['Price']."</td>
           <td>".$result['Quantity']."</td>
-          <td>".$result['Product ID']."</td>
+          <td>".$result['Product_ID']."</td>
+          <td><a href='delete.php?id=$result[Product_ID]'>Delete</td>
           </tr>
           ";
         }
@@ -61,6 +63,7 @@
 
   <tfoot>
     <tr>
+    <th></th>
     <th></th>
     <th></th>
     <th></th>

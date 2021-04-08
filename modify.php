@@ -40,7 +40,7 @@ $id = $_GET['id'];
 </nav>
 
 
-  <form action="" method="POST">
+  <form action="" method="GET">
     <table id="table">
     <tr>
       <td>Brand</td>
@@ -85,3 +85,30 @@ $id = $_GET['id'];
   </form>
 </body>
 </html>
+
+<?php
+
+if($_GET['submit']) {
+  $br = $_GET['brand'];
+  $pn = $_GET['product'];
+  $clr = $_GET['color'];
+  $sz = $_GET['size'];
+  $pr = $_GET['price'];
+  $qn = $_GET['quantity'];
+  $idt = $_GET['id'];
+
+  $query = "UPDATE products SET Brand='$br',Product_Name='$pn',Color='$clr',Size='$sz',Price='$pr',Quantity='$qn',Product_ID='$idt' WHERE Product_ID='$idt'";
+
+  $data = mysqli_query($connect, $query);
+
+  if($data) {
+    echo"<script>alert('Entry Successfully Updated!');</script>";
+  }
+  ?>
+  <META HTTP-EQUIV="Refresh" CONTENT="0; URL=stock-table.php">
+  <?php
+  
+  
+}
+
+?>

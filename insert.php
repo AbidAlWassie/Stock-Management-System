@@ -27,7 +27,7 @@
 </nav>
 
 
-  <form action="" method="GET">
+  <form action="" method="POST">
     <table id="table">
     <tr>
       <td>Brand</td>
@@ -65,7 +65,7 @@
     </tr>
 
     <tr>
-      <td colspan="2"><a class="btnSubmit" href="stock-table.php"><input id="btnSubmit" type="submit"></a></td>
+      <td colspan="2"><a class="btnSubmit" href="stock-table.php"><input id="btnSubmit" type="submit" name="submit"></a></td>
     </tr>
     
     </table>
@@ -74,24 +74,35 @@
 </html>
 
 <?php
-
 include("connect.php");
 error_reporting(0);
 
-$brand=$_GET['brand'];
-$product=$_GET['product'];
-$color=$_GET['color'];
-$size=$_GET['size'];
-$price=$_GET['price'];
-$quantity=$_GET['quantity'];
-$id=$_GET['id'];
+if($_POST['submit']){
+  $brand=$_POST['brand'];
+  $product=$_POST['product'];
+  $color=$_POST['color'];
+  $size=$_POST['size'];
+  $price=$_POST['price'];
+  $quantity=$_POST['quantity'];
+  $id=$_POST['id'];
+  
+  if($brand!="" && $product!="" && $color!="" && $size!="" && $price && $quantity!="" && $id!="") {
+    $query="INSERT INTO products VALUES ('$brand', '$product', '$color', '$size', '$price', '$quantity', '$id')";
+    $data=mysqli_query($connect, $query);
 
-$query="INSERT INTO products VALUES ('$brand', '$product', '$color', '$size', '$price', '$quantity', '$id')";
-$data=mysqli_query($connect, $query);
+    if ($data) {
+      echo "Data inserted into the Database";
+    }
+    
+    else {
+      echo "couldn't execute " + $query;
+    }
+  }
 
-if ($data) {
-  echo "Data inserted into the Database";
-} else {
-  echo "couldn't execute " + $query;
+
+  
+
 }
+
+
 ?>

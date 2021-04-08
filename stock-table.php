@@ -9,6 +9,12 @@
 </head>
 <body>
 
+<nav class="navbar">
+  <h3><a href="insert.php">Insert</a></h3>
+  <h3></h3>
+  <h3></h3>
+</nav>
+
 <table class="table-sortable" id="stock">
   <thead id="list-column">
     <tr>
@@ -21,9 +27,6 @@
       <th>Product ID</th>
     </tr>
   </thead>
-
-
-
 
   <tbody id="root-stock" class="list-items">
     <?php

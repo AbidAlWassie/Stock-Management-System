@@ -5,12 +5,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="shortcut icon" href="img/package.png">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .btnSubmit {
+      display: flex;
+      justify-content: center;
+    }
+    #btnSubmit {
+    width: 250px;
+    }
+  </style>
   <title>Insert Database</title>
 
   <title>Modify</title>
 </head>
 <body>
-  <form action="">
+
+<nav class="navbar">
+  <h3><a href="stock-table.php">Stock</a></h3>
+  <h3></h3>
+  <h3></h3>
+</nav>
+
+
+  <form action="" method="GET">
     <table id="table">
     <tr>
       <td>Brand</td>
@@ -48,7 +65,7 @@
     </tr>
 
     <tr>
-      <td><a href="stock-table.php"><input type="submit"></a></td>
+      <td colspan="2"><a class="btnSubmit" href="stock-table.php"><input id="btnSubmit" type="submit"></a></td>
     </tr>
     
     </table>

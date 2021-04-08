@@ -7,24 +7,40 @@
   <link rel="stylesheet" href="css/table.css">
   <title>Display from Database</title>
   <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
     .navbar a {
-      font-size: 20px;
+      font-size: 30px;
       text-decoration: none;
-      padding: 0 10px;
-      color: black;
+      padding: 1.5px 15px;
+      color: white;
+      background-color: #272727;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
     }
 
     .danger {
-      color: red !important;
+      color: white !important;
+      background-color: red !important;
+      /* padding: auto 1.5px; */
     }
 
     .btnModify {
       color: white;
-      background-color: #436cfe;
+      background-color: #256dca;
       padding: 5px 25px;
       font-weight: 600;
       text-decoration: none;
       float:left;
+    }
+
+    .btnModify:hover {
+      color: white;
+      background-color: #1d5aaa;
+      text-decoration: underline;
     }
   </style>
 </head>

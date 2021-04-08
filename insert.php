@@ -6,27 +6,101 @@
   <link rel="shortcut icon" href="img/package.png">
   <link rel="stylesheet" href="css/style.css">
   <style>
+    body {
+      background: #2d6fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    header h1 {
+      /* display: flex; */
+      text-align: center;
+      color:white;
+    }
+
     .btnSubmit {
       display: flex;
       justify-content: center;
     }
     #btnSubmit {
-    width: 250px;
+    width: 50%;
     }
 
-    .navbar a {
-      font-size: 20px;
+    a {
       text-decoration: none;
-      padding: 0 10px;
-      color: black;
+      font-size: 2rem;
+      padding: 10px;
+      color: white;
     }
 
-    .danger {
-      color: red !important;
+    a.danger {
+      color: white;
+      background-color: red;
+    }
+
+    a:hover {
+      text-decoration: underline !important;
+    }
+
+
+    .navbar a:not(.danger) {
+      color: white;
+      background-color: black;
     }
 
     input {
       font-size: 1rem;
+    }
+
+    span {
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+    #table1 {
+      /* display: flex;
+      justify-content: center; */
+      background: #e1e5eb;
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 600px;
+      margin: 0 auto;
+      }
+
+      /* tbody {
+        padding: 20px;
+      } */
+
+      .label {
+        float:right;
+        text-align: center;
+        padding: 25px 10px;
+      }
+
+      .input:first-child{
+        padding-top: 10px;
+      }
+
+      .input {
+        padding-right: 20px;
+        /* padding: 25px 10px; */
+      }
+
+    #table td, #table th {
+      border: 1px solid #ddd;
+      /* padding: 8px; */
+    }
+
+    #table tr:nth-child(even){background-color: #f2f2f2;}
+
+    #table tr:hover {background-color: #ddd;}
+
+    #table th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
     }
   </style>
   <title>Insert Database</title>
@@ -42,45 +116,50 @@
 </nav>
 
 
+<header>
+  <h1>Create a new entry</h1>
+</header>
+
+
   <form action="" method="POST">
-    <table id="table">
+    <table id="table1">
     <tr>
-      <td>Brand</td>
-      <td><input type="text" name="brand" placeholder="Brand" required></td>
+      <td class="label">Brand</td>
+      <td class="input"><input type="text" name="brand" placeholder="Brand" required></td>
     </tr>
 
     <tr>
-      <td>Product Name</td>
-      <td><input type="text" name="product" placeholder="Product Name" required></td>
+      <td class="label">Product Name</td>
+      <td class="input"><input type="text" name="product" placeholder="Product Name" required></td>
     </tr>
 
     <tr>
-      <td>Color</td>
-      <td><input type="text" name="color" placeholder="Color" required></td>
+      <td class="label">Color</td>
+      <td class="input"><input type="text" name="color" placeholder="Color" required></td>
     </tr>
 
     <tr>
-      <td>Size</td>
-      <td><input type="text" name="size" placeholder="Size" required></td>
+      <td class="label">Size</td>
+      <td class="input"><input type="text" name="size" placeholder="Size" required></td>
     </tr>
 
     <tr>
-      <td>Price</td>
-      <td><input type="text" name="price" placeholder="Price" required></td>
+      <td class="label">Price</td>
+      <td class="input"><input type="text" name="price" placeholder="Price" required></td>
     </tr>
 
     <tr>
-      <td>Quantity</td>
-      <td><input type="text" name="quantity" placeholder="Quantity" required></td>
+      <td class="label">Quantity</td>
+      <td class="input"><input type="text" name="quantity" placeholder="Quantity" required></td>
     </tr>
 
     <tr>
-      <td>Product ID</td>
-      <td><input type="text" name="id" placeholder="Product ID" required></td>
+      <td class="label">Product ID</td>
+      <td class="input"><input type="text" name="id" placeholder="Product ID" required></td>
     </tr>
 
     <tr>
-      <td colspan="2"><a class="btnSubmit" href="stock-table.php"><input id="btnSubmit" type="submit" name="submit"></a></td>
+      <td colspan="2"><a class="btnSubmit" href="stock-table.php"><input id="btnSubmit" type="submit" name="submit" value="Insert"></a></td>
     </tr>
     
     </table>

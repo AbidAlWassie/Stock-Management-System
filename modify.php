@@ -26,15 +26,33 @@ $id = $_GET['id'];
     #btnSubmit {
     width: 250px;
     }
+
+    a {
+      text-decoration: none;
+      font-size: 2rem;
+      padding: 10px;
+    }
+
+    input {
+      font-size: 1rem;
+    }
   </style>
   <title>Modify</title>
 </head>
 <body>
 
-
+<nav class="navbar">
+  <a class="" href="stock-table.php">&larr;</a>
+</nav>
 
   <form action="" method="GET">
     <table id="table">
+
+    <tr>
+      <td>Product ID</td>
+      <td><input type="text" value="<?php echo "$id" ?>" name="id" placeholder="Product ID"></td>
+    </tr>
+
     <tr>
       <td>Brand</td>
       <td><input type="text" value="<?php echo "$brand" ?>" name="brand" placeholder="Brand"></td>
@@ -65,10 +83,7 @@ $id = $_GET['id'];
       <td><input type="text" value="<?php echo "$quantity" ?>" name="quantity" placeholder="Quantity"></td>
     </tr>
 
-    <tr>
-      <td>Product ID</td>
-      <td><input type="text" value="<?php echo "$id" ?>" name="id" placeholder="Product ID"></td>
-    </tr>
+    
 
     <tr>
       <td colspan="2"><a class="btnSubmit" href="stock-table.php"><input id="btnSubmit" type="submit" name="submit"></a></td>

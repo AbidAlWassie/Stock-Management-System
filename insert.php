@@ -24,6 +24,10 @@
     .danger {
       color: red !important;
     }
+
+    input {
+      font-size: 1rem;
+    }
   </style>
   <title>Insert Database</title>
 
@@ -42,37 +46,37 @@
     <table id="table">
     <tr>
       <td>Brand</td>
-      <td><input type="text" name="brand" placeholder="Brand"></td>
+      <td><input type="text" name="brand" placeholder="Brand" required></td>
     </tr>
 
     <tr>
       <td>Product Name</td>
-      <td><input type="text" name="product" placeholder="Product Name"></td>
+      <td><input type="text" name="product" placeholder="Product Name" required></td>
     </tr>
 
     <tr>
       <td>Color</td>
-      <td><input type="text" name="color" placeholder="Color"></td>
+      <td><input type="text" name="color" placeholder="Color" required></td>
     </tr>
 
     <tr>
       <td>Size</td>
-      <td><input type="text" name="size" placeholder="Size"></td>
+      <td><input type="text" name="size" placeholder="Size" required></td>
     </tr>
 
     <tr>
       <td>Price</td>
-      <td><input type="text" name="price" placeholder="Price"></td>
+      <td><input type="text" name="price" placeholder="Price" required></td>
     </tr>
 
     <tr>
       <td>Quantity</td>
-      <td><input type="text" name="quantity" placeholder="Quantity"></td>
+      <td><input type="text" name="quantity" placeholder="Quantity" required></td>
     </tr>
 
     <tr>
       <td>Product ID</td>
-      <td><input type="text" name="id" placeholder="Product ID"></td>
+      <td><input type="text" name="id" placeholder="Product ID" required></td>
     </tr>
 
     <tr>

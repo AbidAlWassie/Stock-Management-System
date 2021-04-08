@@ -77,7 +77,7 @@
 include("connect.php");
 error_reporting(0);
 
-if($_POST['submit']){
+if(isset($_POST['submit'])){
   $brand=$_POST['brand'];
   $product=$_POST['product'];
   $color=$_POST['color'];

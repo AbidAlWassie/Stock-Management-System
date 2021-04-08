@@ -1,17 +1,29 @@
+<script>
+  function confirmDelete() {
+    return confirm('Do you really want to Delete this row?');
+  }
+</script>
+
 <?php
 include("connect.php");
 error_reporting(0);
 
-$product_id=$_GET['id'];
-$query = "DELETE FROM products WHERE Product_ID = '$product_id'"
+$Product_ID=$_GET['id'];
+$query="DELETE FROM products WHERE Product_ID = '$Product_ID'";
 
-$data = mysqli_query($connect,$query);
+$data=mysqli_query($connect,$query);
 
 if ($data) {
-  echo "<font color='red'>Item deleted from Database"
+  echo "<script>alert('Item deleted from Database');</script>";
+
+  ?>
+
+  <META HTTP-EQUIV="Refresh" CONTENT="0; URL=stock-table.php">
+  
+<?php
+
+} else {
+  echo "<font color='red'>Couldn't delete item";
 }
 
-else {
-  echo "<font color='blue'>Couldn't delete item"
-}
 ?>

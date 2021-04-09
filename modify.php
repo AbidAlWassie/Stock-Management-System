@@ -111,7 +111,7 @@ $id = $_GET['id'];
 <body>
 
 <nav class="navbar">
-  <a class="back" href="stock-table.php"><span>&#60;</span>Back</a>
+  <a class="back" href="index.php"><span>&#60;</span>Back</a>
 </nav>
 
 <header>
@@ -159,7 +159,7 @@ $id = $_GET['id'];
     
 
     <tr>
-      <td colspan="2"><a class="btnSubmit" href="stock-table.php"><input id="btnSubmit" type="submit" name="submit"></a></td>
+      <td colspan="2"><a class="btnSubmit" href="index.php"><input id="btnSubmit" type="submit" name="submit"></a></td>
     </tr>
     
     </table>
@@ -186,7 +186,7 @@ if($_GET['submit']) {
     echo"<script>alert('Entry Successfully Updated!');</script>";
   }
   ?>
-  <META HTTP-EQUIV="Refresh" CONTENT="0; URL=stock-table.php">
+  <META HTTP-EQUIV="Refresh" CONTENT="0; URL=index.php">
   <?php
   
   

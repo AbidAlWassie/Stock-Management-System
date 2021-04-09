@@ -18,7 +18,7 @@ if ($data) {
 
   ?>
 
-  <META HTTP-EQUIV="Refresh" CONTENT="0; URL=stock-table.php">
+  <META HTTP-EQUIV="Refresh" CONTENT="0; URL=index.php">
   
 <?php
 

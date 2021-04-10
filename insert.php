@@ -110,8 +110,9 @@
 <body>
 
 <nav class="navbar">
-  <a href="stock-table.php">Stock</a>
+  <a href="index.php">Stock</a>
   <a href="insert.php">Insert</a>
+  <a href="about.html">About</a>
   <a class="danger" href="delete-page.php">Delete</a>
 </nav>
 
@@ -159,7 +160,7 @@
     </tr>
 
     <tr>
-      <td colspan="2"><a class="btnSubmit" href="stock-table.php"><input id="btnSubmit" type="submit" name="submit" value="Insert"></a></td>
+      <td colspan="2"><a class="btnSubmit" href="index.php"><input id="btnSubmit" type="submit" name="submit" value="Insert"></a></td>
     </tr>
     
     </table>

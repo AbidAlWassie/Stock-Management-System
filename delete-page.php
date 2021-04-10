@@ -112,6 +112,7 @@
 <nav class="navbar">
   <a href="index.php">Stock</a>
   <a href="insert.php">Insert</a>
+  <a href="about.html">About</a>
   <a class="danger" href="delete-page.php">Delete</a>
 </nav>
 

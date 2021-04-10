@@ -21,6 +21,7 @@ $id = $_GET['id'];
   <style>
     body {
       background: #2d6fff;
+      margin: 0;
     }
 
     header h1 {

@@ -103,7 +103,7 @@
       color: white;
     }
   </style>
-  <title>Insert Database</title>
+  <title>Insert into Database</title>
 
   <title>Modify</title>
 </head>
@@ -173,13 +173,13 @@ include("connect.php");
 error_reporting(0);
 
 if(isset($_POST['submit'])){
-  $brand=$_POST['brand'];
-  $product=$_POST['product'];
-  $color=$_POST['color'];
-  $size=$_POST['size'];
-  $price=$_POST['price'];
-  $quantity=$_POST['quantity'];
-  $id=$_POST['id'];
+  $brand = mysqli_real_escape_string($connect, $_POST['brand']);
+  $product = mysqli_real_escape_string($connect, $_POST['product']);
+  $color = mysqli_real_escape_string($connect, $_POST['color']);
+  $size = mysqli_real_escape_string($connect, $_POST['size']);
+  $price = mysqli_real_escape_string($connect, $_POST['price']);
+  $quantity = mysqli_real_escape_string($connect, $_POST['quantity']);
+  $id = mysqli_real_escape_string($connect, $_POST['id']);
   
   if($brand!="" && $product!="" && $color!="" && $size!="" && $price && $quantity!="" && $id!="") {
     $query="INSERT INTO products VALUES ('$brand', '$product', '$color', '$size', '$price', '$quantity', '$id')";

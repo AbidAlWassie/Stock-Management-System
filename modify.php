@@ -1,13 +1,13 @@
 <?php
 include("connect.php");
 error_reporting(0);
-$brand = $_GET['brand'];
-$product = $_GET['product'];
-$color = $_GET['color'];
-$size = $_GET['size'];
-$price = $_GET['price'];
-$quantity = $_GET['quantity'];
-$id = $_GET['id'];
+$brand = mysqli_real_escape_string($connect, $_GET['brand']);
+$product = mysqli_real_escape_string($connect, $_GET['product']);
+$color = mysqli_real_escape_string($connect, $_GET['color']);
+$size = mysqli_real_escape_string($connect, $_GET['size']);
+$price = mysqli_real_escape_string($connect, $_GET['price']);
+$quantity = mysqli_real_escape_string($connect, $_GET['quantity']);
+$id = mysqli_real_escape_string($connect, $_GET['id']);
 
 ?>
 

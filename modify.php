@@ -171,13 +171,13 @@ $id = mysqli_real_escape_string($connect, $_GET['id']);
 <?php
 
 if($_GET['submit']) {
-  $br = $_GET['brand'];
-  $pn = $_GET['product'];
-  $clr = $_GET['color'];
-  $sz = $_GET['size'];
-  $pr = $_GET['price'];
-  $qn = $_GET['quantity'];
-  $idt = $_GET['id'];
+  $br = htmlspecialchars($_GET['brand']);
+  $pn = htmlspecialchars($_GET['product']);
+  $clr = htmlspecialchars($_GET['color']);
+  $sz = htmlspecialchars($_GET['size']);
+  $pr = htmlspecialchars($_GET['price']);
+  $qn = htmlspecialchars($_GET['quantity']);
+  $idt = htmlspecialchars($_GET['id']);
 
   $query = "UPDATE products SET Brand='$br',Product_Name='$pn',Color='$clr',Size='$sz',Price='$pr',Quantity='$qn',Product_ID='$idt' WHERE Product_ID='$idt'";
 

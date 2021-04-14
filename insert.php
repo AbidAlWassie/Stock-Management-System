@@ -124,6 +124,12 @@
 
   <form action="" method="POST">
     <table id="table1">
+
+    <tr>
+      <td class="label">Product ID</td>
+      <td class="input"><input type="text" name="id" placeholder="Product ID"></td>
+    </tr>
+
     <tr>
       <td class="label">Brand</td>
       <td class="input"><input type="text" name="brand" placeholder="Brand" required></td>
@@ -154,10 +160,7 @@
       <td class="input"><input type="text" name="quantity" placeholder="Quantity" required></td>
     </tr>
 
-    <tr>
-      <td class="label">Product ID</td>
-      <td class="input"><input type="text" name="id" placeholder="Product ID" required></td>
-    </tr>
+    
 
     <tr>
       <td colspan="2"><a class="btnSubmit" href="index.php"><input id="btnSubmit" type="submit" name="submit" value="Insert"></a></td>
@@ -181,7 +184,7 @@ if(isset($_POST['submit'])){
   $quantity = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['quantity']));
   $id = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['id']));
   
-  if($brand!="" && $product!="" && $color!="" && $size!="" && $price && $quantity!="" && $id!="") {
+  if($brand!="" && $product!="" && $color!="" && $size!="" && $price && $quantity!="") {
     $query="INSERT INTO products VALUES ('$brand', '$product', '$color', '$size', '$price', '$quantity', '$id')";
     $data=mysqli_query($connect, $query);
 

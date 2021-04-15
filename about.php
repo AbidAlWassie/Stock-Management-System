@@ -32,7 +32,7 @@ body {
 }
 
 .navbar a.active {
-  opacity: 0.80;
+  background-color: #3D3D3D;
 }
 
 .navbar a:hover {

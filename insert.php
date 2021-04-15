@@ -25,7 +25,7 @@
     }
 
     .navbar a.active {
-      opacity: 0.9;
+      background-color: #3D3D3D;
     }
 
 

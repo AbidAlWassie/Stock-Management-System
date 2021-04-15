@@ -52,6 +52,11 @@
       background-color: #1d5aaa;
       text-decoration: underline;
     }
+
+    #stock td, #stock th {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
   </style>
 </head>
 <body>

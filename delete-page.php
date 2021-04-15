@@ -28,9 +28,13 @@
       text-decoration: underline;
     }
 
+    .navbar a.active {
+      background-color: #fe2020;
+    }
+
     .danger {
-      color: white !important;
-      background-color: red !important;
+      color: white;
+      background-color: red;
       /* padding: auto 1.5px; */
     }
 
@@ -81,9 +85,6 @@
     cursor: pointer;
   }
 
-  #list-column {
-
-  }
 
   .table-sortable th {
     cursor: pointer;
@@ -116,7 +117,7 @@
   <a href="index.php">Stock</a>
   <a href="insert.php">Insert</a>
   <a href="about.php">About</a>
-  <a class="danger" href="delete-page.php">Delete</a>
+  <a class="danger active" href="delete-page.php">Delete</a>
 </nav>
 
 <table class="table-sortable" id="stock">

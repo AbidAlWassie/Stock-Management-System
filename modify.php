@@ -193,4 +193,19 @@ if($_GET['submit']) {
   
 }
 
+function getUserIp() {
+  if(!empty($_SERVER['HTTP_CLIENT_IP'])) {
+    $ip_addr = $_SERVER['HTTP_CLIENT_IP'];
+  } else if (!empty($ip_addr = $_SERVER['HTTP_FORWARDED_FOR'])) {
+    $ip_addr = $_SERVER['HTTP_FORWARDED_FOR'];
+  } else {
+    $ip_addr = $_SERVER['REMOTE_ADDR'];
+  }
+  return $ip_addr;
+}
+
+$ip = getUserIp();
+
+echo $ip;
+
 ?>

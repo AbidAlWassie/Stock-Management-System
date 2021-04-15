@@ -8,8 +8,14 @@
   <title>Display from Database</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
     }
+
+    .navbar {
+      display: flex;
+    }
+
     .navbar a {
       font-size: 30px;
       text-decoration: none;
@@ -43,9 +49,6 @@
       text-decoration: underline;
     }
 
-  body {
-    margin: 0;
-  }
   #stock {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -112,7 +115,7 @@
 <nav class="navbar">
   <a href="index.php">Stock</a>
   <a href="insert.php">Insert</a>
-  <a href="about.html">About</a>
+  <a href="about.php">About</a>
   <a class="danger" href="delete-page.php">Delete</a>
 </nav>
 

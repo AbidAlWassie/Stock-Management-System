@@ -11,6 +11,23 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
+    
+    .navbar {
+      display: flex;
+    }
+
+    .navbar a {
+      font-size: 30px;
+      text-decoration: none;
+      padding: 1.5px 15px;
+      color: white;
+      background-color: #272727;
+    }
+
+    .navbar a.active {
+      opacity: 0.9;
+    }
+
 
     header h1 {
       /* display: flex; */
@@ -43,10 +60,10 @@
     }
 
 
-    .navbar a:not(.danger) {
+    /* .navbar a:not(.danger) {
       color: white;
       background-color: black;
-    }
+    } */
 
     input {
       font-size: 1rem;
@@ -110,10 +127,10 @@
 <body>
 
 <nav class="navbar">
-  <a href="index.php">Stock</a>
-  <a href="insert.php">Insert</a>
-  <a href="about.html">About</a>
-  <a class="danger" href="delete-page.php">Delete</a>
+  <a href="index.php" draggable="false">Stock</a>
+  <a href="insert.php" class="active" draggable="false">Insert</a>
+  <a href="about.php" draggable="false">About</a>
+  <a class="danger" href="delete-page.php" draggable="false">Delete</a>
 </nav>
 
 
@@ -197,10 +214,22 @@ if(isset($_POST['submit'])){
     }
   }
 
-
-  
-
 }
 
+
+function getUserIp() {
+  if(!empty($_SERVER['HTTP_CLIENT_IP'])) {
+    $ip_addr = $_SERVER['HTTP_CLIENT_IP'];
+  } else if (!empty($ip_addr = $_SERVER['HTTP_FORWARDED_FOR'])) {
+    $ip_addr = $_SERVER['HTTP_FORWARDED_FOR'];
+  } else {
+    $ip_addr = $_SERVER['REMOTE_ADDR'];
+  }
+  return $ip_addr;
+}
+
+$ip = getUserIp();
+
+echo $ip;
 
 ?>

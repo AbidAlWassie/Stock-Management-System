@@ -8,14 +8,24 @@
   <title>Display from Database</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
     }
+
+    .navbar {
+      display: flex;
+    }
+
     .navbar a {
       font-size: 30px;
       text-decoration: none;
       padding: 1.5px 15px;
       color: white;
       background-color: #272727;
+    }
+
+    .navbar a.active {
+      opacity: 0.9;
     }
 
     .navbar a:hover {
@@ -47,9 +57,9 @@
 <body>
 
 <nav class="navbar">
-  <a href="index.php">Stock</a>
+  <a href="index.php" class="active">Stock</a>
   <a href="insert.php">Insert</a>
-  <a href="about.html">About</a>
+  <a href="about.php">About</a>
   <a class="danger" href="delete-page.php">Delete</a>
 </nav>
 

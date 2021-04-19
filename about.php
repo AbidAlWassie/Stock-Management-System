@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Created by Abid Al Wassie</title>
   <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="fonts/stylesheet.css">
   <style>
     body {
   background: #1b4bb4;

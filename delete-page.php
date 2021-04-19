@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="shortcut icon" href="img/package.png">
   <!-- <link rel="stylesheet" href="css/table.css"> -->
+  <link rel="stylesheet" href="fonts/stylesheet.css">
   <title>Display from Database</title>
   <style>
     body {

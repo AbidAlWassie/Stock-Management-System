@@ -1,5 +1,14 @@
 body {
   font-family: 'Open Sans' !important;
+  font-weight: 600;
+}
+
+body > * {
+  font-family: 'Open Sans' !important;
+}
+
+td {
+  font-weight: 600;
 }
 
 @font-face {

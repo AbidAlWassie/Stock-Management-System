@@ -13,7 +13,7 @@ if (!isset($_SESSION['loggedin'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="shortcut icon" href="img/package.png">
-  <!-- <link rel="stylesheet" href="css/table.css"> -->
+  <link rel="stylesheet" href="css/table.css">
   <link rel="stylesheet" href="fonts/stylesheet.css">
   <title>Display from Database</title>
   <style>
@@ -34,100 +34,48 @@ if (!isset($_SESSION['loggedin'])) {
       background-color: #272727;
     }
 
+    .navbar a.active {
+      opacity: 0.9;
+    }
+
     .navbar a:hover {
       text-decoration: underline;
     }
 
-    .navbar a.active {
-      background-color: #fe2020;
-    }
-
     .danger {
-      color: white;
-      background-color: red;
+      color: white !important;
+      background-color: red !important;
       /* padding: auto 1.5px; */
     }
 
-    .btnDelete {
+    .btnModify {
       color: white;
-      background-color: red;
+      background-color: #256dca;
       padding: 5px 25px;
       font-weight: 600;
       text-decoration: none;
       float:left;
     }
 
-    .btnDelete:hover {
+    .btnModify:hover {
       color: white;
-      background-color: #d40000;
+      background-color: #1d5aaa;
       text-decoration: underline;
     }
 
-    #stock {
-      font-family: Arial, Helvetica, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
-
     #stock td, #stock th {
-      border: 1px solid red;
+      border: 1px solid #ccc;
       padding: 8px;
     }
-
-    #stock tr:nth-child(even){background-color: #f2f2f2;}
-
-    #stock tr:hover {background-color: #bbb;}
-
-    #stock thead th {
-      padding-top: 12px;
-      padding-bottom: 12px;
-      text-align: left;
-      background-color: #fe2020;
-      color: white;
-    }
-
-    #stock tfoot th {
-      background-color: #2b2b2b;
-      color: white;
-    }
-
-    thead > * {
-      cursor: pointer;
-    }
-
-
-    .table-sortable th {
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .table-sortable .th-sort-asc::after {
-      content: "\25b4" !important;
-    }
-
-    .table-sortable .th-sort-desc::after {
-      content: "\25be" !important;
-    }
-
-    .table-sortable .th-sort-asc::after,
-    .table-sortable .th-sort-desc::after {
-      margin-left: 5px;
-    }
-
-    .table-sortable .th-sort-asc,
-    .table-sortable .th-sort-desc {
-      background-color: rgba(255, 51, 51, 0.9) !important;
-    }
-
   </style>
 </head>
 <body>
 
 <nav class="navbar">
-  <a href="stock.php">Stock</a>
+  <a href="stock.php" class="active">Stock</a>
   <a href="insert.php">Insert</a>
   <a href="about.php">About</a>
-  <a class="danger active" href="delete-page.php">Delete</a>
+  <a class="danger" href="delete-page.php">Delete</a>
   <a href="logout.php">Logout</a>
 </nav>
 
@@ -141,7 +89,7 @@ if (!isset($_SESSION['loggedin'])) {
       <th>Price</th>
       <th>Quantity</th>
       <th>Product ID</th>
-      <th>Options</th>
+      <th colspan="2">Options</th>
     </tr>
   </thead>
 
@@ -166,7 +114,7 @@ if (!isset($_SESSION['loggedin'])) {
           <td>".$result['Price']."</td>
           <td>".$result['Quantity']."</td>
           <td>".$result['Product_ID']."</td>
-          <td><a href='delete.php?id=$result[Product_ID]' onclick='return confirmDelete()' class='btnDelete'>Delete</td>
+          <td><a href='modify.php?brand=$result[Brand]&product=$result[Product_Name]&color=$result[Color]&size=$result[Size]&price=$result[Price]&quantity=$result[Quantity]&id=$result[Product_ID]' class='btnModify'>Modify</td>
           </tr>
           ";
         }

@@ -1,4 +1,28 @@
 <?php
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: index.html');
+	exit;
+}
+$DATABASE_HOST = 'localhost';
+$DATABASE_USER = 'root';
+$DATABASE_PASS = '';
+$DATABASE_NAME = 'phplogin';
+$DATABASE_PORT = '3307';
+$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME, $DATABASE_PORT);
+if (mysqli_connect_errno()) {
+	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+}
+// We don't have the password or email info stored in sessions so instead we can get the results from the database.
+$stmt = $con->prepare('SELECT password, email FROM accounts WHERE id = ?');
+// In this case we can use the account ID to get the account info.
+$stmt->bind_param('i', $_SESSION['id']);
+$stmt->execute();
+$stmt->bind_result($password, $email);
+$stmt->fetch();
+$stmt->close();
+
 include("connect.php");
 error_reporting(0);
 $brand = mysqli_real_escape_string($connect, $_GET['brand']);
@@ -113,7 +137,7 @@ $id = mysqli_real_escape_string($connect, $_GET['id']);
 <body>
 
 <nav class="navbar">
-  <a class="back" href="index.php"><span>&#60;</span>Back</a>
+  <a class="back" href="stock.php"><span>&#60;</span>Back</a>
 </nav>
 
 <header>
@@ -161,7 +185,7 @@ $id = mysqli_real_escape_string($connect, $_GET['id']);
     
 
     <tr>
-      <td colspan="2"><a class="btnSubmit" href="index.php"><input id="btnSubmit" type="submit" name="submit"></a></td>
+      <td colspan="2"><a class="btnSubmit" href="stock.php"><input id="btnSubmit" type="submit" name="submit"></a></td>
     </tr>
     
     </table>
@@ -188,7 +212,7 @@ if($_GET['submit']) {
     echo"<script>alert('Entry Successfully Updated!');</script>";
   }
   ?>
-  <META HTTP-EQUIV="Refresh" CONTENT="0; URL=index.php">
+  <META HTTP-EQUIV="Refresh" CONTENT="0; URL=stock.php">
   <?php
   
   

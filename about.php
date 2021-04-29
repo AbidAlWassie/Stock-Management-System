@@ -9,51 +9,52 @@
   <link rel="stylesheet" href="fonts/stylesheet.css">
   <style>
     body {
-  background: #1b4bb4;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-}
+      background: #1b4bb4;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+    }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-.navbar {
-  display: flex;
-}
+    .navbar {
+      display: flex;
+    }
 
-.navbar a {
-  font-size: 30px;
-  text-decoration: none;
-  padding: 1.5px 15px;
-  color: white;
-  background-color: #272727;
-}
+    .navbar a {
+      font-size: 30px;
+      text-decoration: none;
+      padding: 1.5px 15px;
+      color: white;
+      background-color: #272727;
+    }
 
-.navbar a.active {
-  background-color: #3D3D3D;
-}
+    .navbar a.active {
+      background-color: #3D3D3D;
+    }
 
-.navbar a:hover {
-  text-decoration: underline;
-}
+    .navbar a:hover {
+      text-decoration: underline;
+    }
 
-.danger {
-  color: white !important;
-  background-color: red !important;
-  /* padding: auto 1.5px; */
-}
+    .danger {
+      color: white !important;
+      background-color: red !important;
+      /* padding: auto 1.5px; */
+    }
   </style>
   <link rel="shortcut icon" href="img/dollar.png">
 </head>
 <body>
 <nav class="navbar">
-  <a href="index.php">Stock</a>
+  <a href="stock.php">Stock</a>
   <a href="insert.php">Insert</a>
   <a href="about.php" class="active">About</a>
   <a class="danger" href="delete-page.php">Delete</a>
+  <a href="logout.php">Logout</a>
 </nav>
 
   <div class="container">

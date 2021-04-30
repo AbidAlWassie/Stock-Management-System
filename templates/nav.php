@@ -7,5 +7,6 @@ error_reporting(0);
   <a <?php echo $insert ?> href="insert.php">Insert</a>
   <a <?php echo $about ?> href="about.php">About</a>
   <a class="danger" href="delete-page.php">Delete</a>
+  <form action="./toggle.php" method="POST"><button type="submit" class="btnToggle">Mode</button></form>
   <a class="logout" <?php echo $logout ?> href="logout.php">Logout</a>
 </nav>

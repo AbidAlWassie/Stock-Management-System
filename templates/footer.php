@@ -3,6 +3,10 @@
   window.onload = () => {
     // var rootStock = document.getElementById("root-stock");
     // rootStock.insertAdjacentHTML("beforeend", htmlString);
+    // var disabled = document.querySelectorAll(".disabled");
+
+    // console.log(disabled);
+    // disabled.style.backgroundColor = "black";
     
     var table = document.getElementById("root-stock");
     let result = 0;

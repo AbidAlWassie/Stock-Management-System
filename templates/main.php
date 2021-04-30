@@ -1,4 +1,4 @@
-<table class="table-sortable" id="stock">
+<table class="table-sortable <?php echo $theme ?>" id="stock">
   <thead id="list-column">
     <tr>
       <th>Brand</th>
@@ -12,7 +12,7 @@
     </tr>
   </thead>
 
-  <tbody id="root-stock" class="list-items">
+  <tbody id="root-stock" class="list-items <?php echo $theme ?>">
     <?php
     include("connect.php");
     error_reporting(0);

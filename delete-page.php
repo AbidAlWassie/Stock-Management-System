@@ -7,6 +7,8 @@ if (!isset($_SESSION['loggedin'])) {
 	exit;
 }
 
+include_once "includes/user_info.php";
+
 include_once "templates/header.php";
 include_once "templates/nav.php";
 
@@ -24,7 +26,7 @@ include_once "templates/nav.php";
 </head>
 <body>
 
-<table class="table-sortable" id="stock">
+<table class="table-sortable <?php echo $theme ?>" id="stock">
   <thead id="list-column">
     <tr>
       <th>Brand</th>

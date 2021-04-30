@@ -1,6 +1,7 @@
 body {
   margin: 0;
 }
+
 #stock {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -29,13 +30,33 @@ body {
   color: white;
 }
 
+.disabled td, .disabled th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.disabled tr:nth-child(even){background-color: #313131 !important;}
+
+.disabled tr:hover {background-color: rgb(17, 17, 17) !important;}
+
+.disabled thead th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #3d93ee;
+  color: white;
+}
+
+.disabled tfoot th {
+  background-color: #fff;
+  color: #2b2b2b;
+}
+
+
 thead > * {
   cursor: pointer;
 }
 
-#list-column {
-
-}
 
 .table-sortable th {
   cursor: pointer;

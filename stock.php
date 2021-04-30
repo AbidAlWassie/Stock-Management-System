@@ -6,6 +6,8 @@ if (!isset($_SESSION['loggedin'])) {
 	exit;
 }
 
+include_once "includes/user_info.php";
+
 $title = "Stock";
 $stock = "class='active'";
 

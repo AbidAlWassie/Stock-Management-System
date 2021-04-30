@@ -7,7 +7,10 @@ if (!isset($_SESSION['loggedin'])) {
 	exit;
 }
 
+
 include_once "includes/user_info.php";
+
+$rl = "action='./toggle_d.php'";
 
 include_once "templates/header.php";
 include_once "templates/nav.php";

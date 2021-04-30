@@ -10,6 +10,7 @@ include_once "includes/user_info.php";
 
 $title = "Stock";
 $stock = "class='active'";
+$rl = "action='./toggle_s.php'";
 
 
 include_once "templates/header.php";

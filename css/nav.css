@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  font-size: 30px;
+  text-decoration: none;
+  padding: 1.5px 15px;
+  color: white;
+  background-color: #272727;
+}
+
+.navbar a.active {
+  opacity: 0.9;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.danger {
+  color: white !important;
+  background-color: red !important;
+  /* padding: auto 1.5px; */
+}
+
+.btnModify {
+  color: white;
+  background-color: #256dca;
+  padding: 5px 25px;
+  font-weight: 600;
+  text-decoration: none;
+  float:left;
+}
+
+.btnModify:hover {
+  color: white;
+  background-color: #1d5aaa;
+  text-decoration: underline;
+}
+
+#stock td, #stock th {
+  border: 1px solid #ccc;
+  padding: 8px;
+}

@@ -1,29 +1,3 @@
-<?php
-// We need to use sessions, so you should always start sessions using the below code.
-session_start();
-// If the user is not logged in redirect to the login page...
-if (!isset($_SESSION['loggedin'])) {
-	header('Location: index.html');
-	exit;
-}
-
-include_once "templates/header.php";
-include_once "templates/nav.php";
-
-?>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="shortcut icon" href="img/package.png">
-  <!-- <link rel="stylesheet" href="css/table.css"> -->
-  <link rel="stylesheet" href="css/delete.css">
-  <!-- <link rel="stylesheet" href="fonts/stylesheet.css"> -->
-  <title>Display from Database</title>
-</head>
-<body>
-
 <table class="table-sortable" id="stock">
   <thead id="list-column">
     <tr>
@@ -34,7 +8,7 @@ include_once "templates/nav.php";
       <th>Price</th>
       <th>Quantity</th>
       <th>Product ID</th>
-      <th>Options</th>
+      <th colspan="2">Options</th>
     </tr>
   </thead>
 
@@ -59,7 +33,7 @@ include_once "templates/nav.php";
           <td>".$result['Price']."</td>
           <td>".$result['Quantity']."</td>
           <td>".$result['Product_ID']."</td>
-          <td><a href='delete.php?id=$result[Product_ID]' onclick='return confirmDelete()' class='btnDelete'>Delete</td>
+          <td><a href='modify.php?brand=$result[Brand]&product=$result[Product_Name]&color=$result[Color]&size=$result[Size]&price=$result[Price]&quantity=$result[Quantity]&id=$result[Product_ID]' class='btnModify'>Modify</td>
           </tr>
           ";
         }
@@ -84,9 +58,3 @@ include_once "templates/nav.php";
     </tr>
   </tfoot>
   </table>
-
-<?php
-
-include_once "templates/footer.php";
-
-?>

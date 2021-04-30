@@ -1,5 +1,5 @@
 <table class="table-sortable" id="stock">
-  <thead id="list-column <?php echo $theme ?>">
+  <thead id="list-column">
     <tr>
       <th>Brand</th>
       <th>Product Name</th>

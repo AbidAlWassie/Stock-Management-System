@@ -3,7 +3,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* #table {
+#table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
@@ -24,7 +24,7 @@ body {
   text-align: left;
   background-color: #256dca;
   color: white;
-} */ */
+}
 
 input[type=text], select {
   width: 100%;

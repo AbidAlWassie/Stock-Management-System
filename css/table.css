@@ -35,15 +35,25 @@ body {
   padding: 8px;
 }
 
-.disabled tr:nth-child(even){background-color: #313131 !important;}
+.disabled tr:nth-child(odd){
+  background-color: #1f1f1f !important;
+  color: #ffffff !important;
+}
 
-.disabled tr:hover {background-color: rgb(17, 17, 17) !important;}
+.disabled tr:nth-child(even){
+  background-color: #313131 !important;
+  color: #ffffff !important;
+}
+
+.disabled tr:hover {
+  background-color: #111111 !important;
+}
 
 .disabled thead th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #3d93ee;
+  background-color: #154e99 !important;
   color: white;
 }
 

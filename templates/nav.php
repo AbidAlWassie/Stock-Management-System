@@ -7,5 +7,5 @@ error_reporting(0);
   <a <?php echo $insert ?> href="insert.php">Insert</a>
   <a <?php echo $about ?> href="about.php">About</a>
   <a class="danger" href="delete-page.php">Delete</a>
-  <a <?php echo $logout ?> href="logout.php">Logout</a>
+  <a class="logout" <?php echo $logout ?> href="logout.php">Logout</a>
 </nav>

@@ -5,6 +5,7 @@ body {
 
 .navbar {
   display: flex;
+  background: #202020;
 }
 
 .navbar a {
@@ -12,11 +13,12 @@ body {
   text-decoration: none;
   padding: 1.5px 15px;
   color: white;
-  background-color: #272727;
+  background-color: #2c2c2c;
 }
 
 .navbar a.active {
-  opacity: 0.9;
+  background: #3a3a3a;
+  /* opacity: 0.9; */
 }
 
 .navbar a:hover {
@@ -27,6 +29,10 @@ body {
   color: white !important;
   background-color: red !important;
   /* padding: auto 1.5px; */
+}
+
+.logout {
+  margin-left: auto;
 }
 
 .btnModify {

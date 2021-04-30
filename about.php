@@ -54,7 +54,7 @@
   <a href="insert.php">Insert</a>
   <a href="about.php" class="active">About</a>
   <a class="danger" href="delete-page.php">Delete</a>
-  <a href="logout.php">Logout</a>
+  <a class="logout" href="logout.php">Logout</a>
 </nav>
 
   <div class="container">

@@ -19,3 +19,50 @@ include_once "templates/insert.php";
 // include_once "templates/footer.php";
 
 ?>
+
+<?php
+include("connect.php");
+error_reporting(0);
+
+if(isset($_POST['submit'])){
+  $brand=$_POST['brand'];
+  $product=$_POST['product'];
+  $color=$_POST['color'];
+  $size=$_POST['size'];
+  $price=$_POST['price'];
+  $quantity=$_POST['quantity'];
+  $id=$_POST['id'];
+  
+  if($id!="" && $brand!="" && $product!="" && $color!="" && $size!="" && $price && $quantity!="") {
+    $query="INSERT INTO products VALUES ('$id', '$brand', '$product', '$color', '$size', '$price', '$quantity')";
+    $data=mysqli_query($connect, $query);
+
+    if ($data) {
+      echo "Data inserted into the Database";
+    }
+    
+    else {
+      echo "couldn't execute " + $query;
+    }
+  }
+
+
+  function getUserIp() {
+    if(!empty($_SERVER['HTTP_CLIENT_IP'])) {
+      $ip_addr = $_SERVER['HTTP_CLIENT_IP'];
+    } else if (!empty($ip_addr = $_SERVER['HTTP_FORWARDED_FOR'])) {
+      $ip_addr = $_SERVER['HTTP_FORWARDED_FOR'];
+    } else {
+      $ip_addr = $_SERVER['REMOTE_ADDR'];
+    }
+    return $ip_addr;
+  }
+  
+  $ip = getUserIp();
+  
+  echo $ip;
+
+}
+
+
+?>

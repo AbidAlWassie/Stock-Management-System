@@ -9,7 +9,7 @@
     
     <tr>
       <td class="label">Product ID</td>
-      <td class="input"><input type="text" name="id" placeholder="Product ID" required></td>
+      <td class="input"><input type="text" name="id" placeholder="Product ID"></td>
     </tr>
 
     <tr>

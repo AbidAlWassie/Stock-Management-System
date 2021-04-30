@@ -14,7 +14,7 @@
 
   <tbody id="root-stock" class="list-items <?php echo $theme ?>">
     <?php
-    include("connect.php");
+    include("./connect.php");
     error_reporting(0);
     $query = "SELECT * FROM products";
     $data = mysqli_query($connect, $query);

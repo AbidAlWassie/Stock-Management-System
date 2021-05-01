@@ -41,12 +41,17 @@ body {
 }
 
 .disabled tr:nth-child(even){
-  background-color: #313131 !important;
+  background-color: #2c2c2c !important;
   color: #ffffff !important;
 }
 
 .disabled tr:hover {
-  background-color: #111111 !important;
+  background-color: #3f3f3f !important;
+}
+
+.disabled td, .disabled th {
+  border: 1px solid rgb(109, 109, 109) !important;
+  padding: 8px;
 }
 
 

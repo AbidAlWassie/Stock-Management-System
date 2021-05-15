@@ -2,7 +2,6 @@ body {
   background: rgb(16,40,88);
   background: linear-gradient(90deg, rgba(16,40,88,1) 0%, rgba(50,73,153,1) 40%, rgba(44,137,186,1) 100%);
   font-family: Arial, Helvetica, sans-serif;
-  height: 100%;
 }
 
 

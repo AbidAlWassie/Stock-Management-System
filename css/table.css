@@ -21,8 +21,17 @@ body {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #3d93ee;
+  background-color: #3478d1;
   color: white;
+}
+
+tfoot tr th {
+  background-color: #333333 !important;
+}
+
+
+tfoot tr th {
+  border: 1px solid #6D6D6D !important;
 }
 
 #stock tfoot th {
@@ -50,10 +59,9 @@ body {
 }
 
 .disabled td, .disabled th {
-  border: 1px solid #6d6d6d !important;
+  border: 1px solid rgb(109, 109, 109) !important;
   padding: 8px;
 }
-
 
 
 .disabled tfoot th {

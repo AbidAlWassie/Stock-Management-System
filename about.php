@@ -49,13 +49,12 @@
   <link rel="shortcut icon" href="img/dollar.png">
 </head>
 <body>
-<nav class="navbar">
-  <a href="stock.php">Stock</a>
-  <a href="insert.php">Insert</a>
-  <a href="about.php" class="active">About</a>
-  <a class="danger" href="delete-page.php">Delete</a>
-  <a class="logout" href="logout.php">Logout</a>
-</nav>
+
+<?php
+
+$about = "class='active'";
+include_once "templates/nav.php";
+?>
 
   <div class="container">
     <h1>About</h1>

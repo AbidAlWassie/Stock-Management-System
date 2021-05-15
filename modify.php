@@ -44,18 +44,15 @@ include_once "templates/header.php";
 include_once "templates/modify.php";
 // include_once "templates/footer.php";
 
-?>
-
-<?php
 
 if($_GET['submit']) {
-  $br = htmlspecialchars($_GET['brand']);
-  $pn = htmlspecialchars($_GET['product']);
-  $clr = htmlspecialchars($_GET['color']);
-  $sz = htmlspecialchars($_GET['size']);
-  $pr = htmlspecialchars($_GET['price']);
-  $qn = htmlspecialchars($_GET['quantity']);
-  $idt = htmlspecialchars($_GET['id']);
+  $br = htmlspecialchars(mysqli_real_escape_string($connect, $_GET['brand']));
+  $pn = htmlspecialchars(mysqli_real_escape_string($connect, $_GET['product']));
+  $clr = htmlspecialchars(mysqli_real_escape_string($connect, $_GET['color']));
+  $sz = htmlspecialchars(mysqli_real_escape_string($connect, $_GET['size']));
+  $pr = htmlspecialchars(mysqli_real_escape_string($connect, $_GET['price']));
+  $qn = htmlspecialchars(mysqli_real_escape_string($connect, $_GET['quantity']));
+  $idt = htmlspecialchars(mysqli_real_escape_string($connect, $_GET['id']));
 
   $query = "UPDATE products SET Brand='$br',Product_Name='$pn',Color='$clr',Size='$sz',Price='$pr',Quantity='$qn',Product_ID='$idt' WHERE Product_ID='$idt'";
 

@@ -25,13 +25,13 @@ include("connect.php");
 error_reporting(0);
 
 if(isset($_POST['submit'])){
-  $brand=$_POST['brand'];
-  $product=$_POST['product'];
-  $color=$_POST['color'];
-  $size=$_POST['size'];
-  $price=$_POST['price'];
-  $quantity=$_POST['quantity'];
-  $id=$_POST['id'];
+  $brand = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['brand']));
+  $product = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['product']));
+  $color = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['color']));
+  $size = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['size']));
+  $price = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['price']));
+  $quantity = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['quantity']));
+  $id = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['id']));
   
   if($id!="" && $brand!="" && $product!="" && $color!="" && $size!="" && $price && $quantity!="") {
     $query="INSERT INTO products VALUES ('$id', '$brand', '$product', '$color', '$size', '$price', '$quantity')";

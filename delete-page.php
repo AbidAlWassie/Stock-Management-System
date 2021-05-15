@@ -7,6 +7,7 @@ if (!isset($_SESSION['loggedin'])) {
 	exit;
 }
 
+$title = "Delete from Database";
 
 include_once "includes/user_info.php";
 

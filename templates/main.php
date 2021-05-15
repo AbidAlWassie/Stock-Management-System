@@ -8,7 +8,7 @@
       <th>Price</th>
       <th>Quantity</th>
       <th>Product ID</th>
-      <th colspan="2">Options</th>
+      <th>Options</th>
     </tr>
   </thead>
 

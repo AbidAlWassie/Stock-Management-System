@@ -1,6 +1,8 @@
 body {
-  background: #2d6fff;
+  background: rgb(16,40,88);
+  background: linear-gradient(90deg, rgba(16,40,88,1) 0%, rgba(50,73,153,1) 40%, rgba(44,137,186,1) 100%);
   font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
 }
 
 
@@ -69,31 +71,45 @@ span {
 #table1 {
   /* display: flex;
   justify-content: center; */
-  background: #e1e5eb;
+  background: #1B2029;
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 600px;
   margin: 0 auto;
-  }
+}
 
-  /* tbody {
-    padding: 20px;
-  } */
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(100, 100, 100);
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #222;
+  color: #ddd;
+  outline: none;
+}
 
-  .label {
-    float:right;
-    text-align: center;
-    padding: 25px 10px;
-  }
+/* tbody {
+  padding: 20px;
+} */
 
-  .input:first-child{
-    padding-top: 10px;
-  }
+.label {
+  float:right;
+  text-align: center;
+  padding: 25px 10px;
+  color: rgb(141, 141, 141);
+}
 
-  .input {
-    padding-right: 20px;
-    /* padding: 25px 10px; */
-  }
+.input:first-child{
+  padding-top: 10px;
+}
+
+.input {
+  padding-right: 20px;
+  /* padding: 25px 10px; */
+}
 
 #table td, #table th {
   border: 1px solid #ddd;
@@ -111,3 +127,4 @@ span {
   background-color: #4CAF50;
   color: white;
 }
+

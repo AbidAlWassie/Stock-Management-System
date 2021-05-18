@@ -41,7 +41,7 @@ tfoot tr th {
 
 .disabled td, .disabled th {
   border: 1px solid #ddd;
-  padding: 8px;
+  /* padding: 8px; */
 }
 
 .disabled tr:nth-child(odd){
@@ -60,7 +60,7 @@ tfoot tr th {
 
 .disabled td, .disabled th {
   border: 1px solid rgb(109, 109, 109) !important;
-  padding: 8px;
+  /* padding: 8px; */
 }
 
 

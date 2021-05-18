@@ -12,15 +12,17 @@ $title = "Insert into Database";
 $insert = "class='active'";
 $form_styles = "<link rel='stylesheet' href='css/form.css'>";
 
+include_once "includes/user_info.php";
+
+$rl = "action='./toggle_i.php'";
+
 
 include_once "templates/header.php";
 include_once "templates/nav.php";
 include_once "templates/insert.php";
 // include_once "templates/footer.php";
 
-?>
 
-<?php
 include("connect.php");
 error_reporting(0);
 

@@ -10,6 +10,7 @@ include_once "includes/user_info.php";
 
 $title = "Stock";
 $stock = "class='active'";
+$table_styles = "<link rel='stylesheet' href='css/table.css'>";
 $rl = "action='./toggle_s.php'";
 
 

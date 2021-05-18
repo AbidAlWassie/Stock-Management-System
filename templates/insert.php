@@ -5,7 +5,7 @@
 
 
   <form action="" method="POST">
-    <table id="table1">
+    <table id="table1" class="form-table <?php echo $theme ?>">
     
     <tr>
       <td class="label">Product ID</td>

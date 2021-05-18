@@ -38,6 +38,9 @@ $title = "Modify";
 // $insert = "class='active'";
 $form_styles = "<link rel='stylesheet' href='css/form.css'>";
 
+include_once "includes/user_info.php";
+
+$rl = "action='./toggle_m.php'";
 
 include_once "templates/header.php";
 // include_once "templates/nav.php";

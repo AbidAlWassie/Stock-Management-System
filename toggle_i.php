@@ -12,11 +12,11 @@ if(isset($_POST['submit'])){
   if($theme === "disabled") {
     $query="UPDATE accounts SET theme='enabled';";
     $data=mysqli_query($con, $query);
-    // header("location: insert.php");
+    header("location: insert.php");
   } else {
     $reverse="UPDATE accounts SET theme='disabled';";
     $data=mysqli_query($con, $reverse);
-    // header("location: insert.php");
+    header("location: insert.php");
   }
 }
 ?>

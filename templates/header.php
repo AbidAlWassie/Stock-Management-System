@@ -7,7 +7,8 @@ error_reporting(0);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="shortcut icon" href="img/package.png">
-  <link rel="stylesheet" href="css/table.css">
+  <?php echo $table_styles ?>
+  <!-- <link rel="stylesheet" href="css/table.css"> -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/nav.css">
   <?php echo $form_styles ?>

@@ -1,5 +1,7 @@
 <nav class="navbar">
-  <a class="back" href="stock.php"><span>&#60;</span>Back</a>
+  <a class="back" href="stock.php"><span>«</span>Back</a>
+  <form <?php echo $rl ?> method="POST"><button type="submit" name="submit" class="btnToggle">Theme</button></form>
+  <a class="logout" <?php echo $logout ?> href="logout.php">Logout</a>
 </nav>
 
 <header>
@@ -7,7 +9,7 @@
 </header>
 
   <form action="" method="GET">
-    <table id="table1">
+    <table id="table1" class="form-table <?php echo $theme ?>">
 
     <tr>
       <td class="label">Product ID</td>

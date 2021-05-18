@@ -12,7 +12,7 @@ body {
   text-decoration: none;
   padding: 1.5px 15px;
   color: white;
-  background-color: #272727;
+  /* background-color: #272727; */
 }
 
 .navbar a:hover {

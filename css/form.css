@@ -63,19 +63,20 @@ input {
 }
 
 span {
-  font-size: 2rem;
-  font-weight: 900;
+  /* font-size: 2rem;
+  font-weight: 900; */
 }
 
 #table1 {
   /* display: flex;
   justify-content: center; */
-  background: #1B2029;
+  background: rgb(201, 201, 201);
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 600px;
   margin: 0 auto;
 }
+
 
 input[type=text], select {
   width: 100%;
@@ -85,21 +86,53 @@ input[type=text], select {
   border: 1px solid rgb(100, 100, 100);
   border-radius: 4px;
   box-sizing: border-box;
-  background: #222;
-  color: #ddd;
+  background: rgb(190, 190, 190);
+  color: rgb(0, 0, 0);
   outline: none;
+}
+
+.label {
+  float:right;
+  text-align: center;
+  padding: 25px 10px;
+  /* color: rgb(141, 141, 141); */
+}
+
+.form-table.disabled {
+  /* display: flex;
+  justify-content: center; */
+  background: #1B2029 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  border-collapse: collapse !important;
+  width: 600px !important;
+  margin: 0 auto !important;
+}
+
+.form-table.disabled input[type=text], select {
+  background: rgb(46, 51, 68) !important;
+  color: rgb(212, 212, 212) !important;
+  width: 100% !important;
+  padding: 12px 20px !important;
+  margin: 8px 0 !important;
+  display: inline-block !important;
+  border: 1px solid rgb(100, 100, 100) !important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+}
+
+.form-table.disabled .label {
+  float:right;
+  text-align: center;
+  padding: 25px 10px;
+  color: rgb(141, 141, 141);
 }
 
 /* tbody {
   padding: 20px;
 } */
 
-.label {
-  float:right;
-  text-align: center;
-  padding: 25px 10px;
-  color: rgb(141, 141, 141);
-}
+
 
 .input:first-child{
   padding-top: 10px;
@@ -123,7 +156,7 @@ input[type=text], select {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4CAF50;
+  /* background-color: #4CAF50; */
   color: white;
 }
 

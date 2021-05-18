@@ -8,6 +8,7 @@ if (!isset($_SESSION['loggedin'])) {
 }
 
 $title = "Delete from Database";
+$table_styles = "<link rel='stylesheet' href='css/table.css'>";
 
 include_once "includes/user_info.php";
 

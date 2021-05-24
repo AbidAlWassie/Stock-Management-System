@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -6,6 +8,13 @@ body {
 .navbar {
   display: flex;
   background: #202020;
+  overflow: hidden !important;
+  position: relative;
+}
+
+.table-sortable {
+  /* margin-top: 45px !important; */
+  overflow: scroll !important;
 }
 
 .navbar a {
@@ -16,6 +25,7 @@ body {
   background-color: #2c2c2c;
   border-top: 4px solid #2c2c2c;
   border-bottom: 4px solid #2c2c2c;
+  border-right: 1px solid #000 !important;
 }
 
 .navbar a.active {

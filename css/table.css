@@ -8,8 +8,13 @@ body {
   width: 100%;
 }
 
-#stock td, #stock th {
-  border: 1px solid #ddd;
+#stock th {
+  border: 1px solid rgb(194, 194, 194);
+  padding: 8px;
+}
+
+#stock td{
+  border: 1px solid rgb(182, 182, 182);
   padding: 8px;
 }
 
@@ -40,7 +45,7 @@ tfoot tr th {
 }
 
 .disabled td, .disabled th {
-  border: 1px solid #ddd;
+  border: 1px solid rgb(197, 197, 197);
   /* padding: 8px; */
 }
 
@@ -58,8 +63,13 @@ tfoot tr th {
   background-color: #3f3f3f !important;
 }
 
-.disabled td, .disabled th {
+.disabled td {
   border: 1px solid rgb(109, 109, 109) !important;
+  /* padding: 8px; */
+}
+
+.disabled th {
+  border: 1px solid rgb(182, 182, 182) !important;
   /* padding: 8px; */
 }
 

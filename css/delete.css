@@ -52,7 +52,7 @@ body {
 
 #stock tr th {
   border: 1px solid rgb(255, 100, 100) !important;
-  border-top: 1px solid rgba(255, 0, 0, 0) !important;
+  /* border-top: 1px solid rgba(255, 0, 0, 0) !important; */
 }
 
 #stock td, #stock th {
@@ -102,5 +102,5 @@ thead > * {
 
 .table-sortable .th-sort-asc,
 .table-sortable .th-sort-desc {
-  background-color: rgba(255, 51, 51, 0.9) !important;
+  background-color: rgb(255, 48, 48) !important;
 }

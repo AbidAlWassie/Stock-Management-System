@@ -4,7 +4,7 @@ $host = "localhost";
 $user = "root";
 $password = "";
 $db_name = "stock";
-$db_port = 3307;
+$db_port = 3306;
 
 $connect = mysqli_connect($host, $user, $password, $db_name, $db_port);
 

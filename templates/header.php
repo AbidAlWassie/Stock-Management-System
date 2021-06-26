@@ -13,6 +13,10 @@ error_reporting(0);
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/simple-scrollbar.css">
   <script src="js/simple-scrollbar.js"></script>
+  <script>
+  const SimpleScrollbar = require("js/simple-scrollbar");
+  require("css/simple-scrollbar.css");
+  </script>
   <?php echo $form_styles ?>
   <?php echo $delete_styles ?>
   <!-- <link rel="stylesheet" href="css/form.css"> -->

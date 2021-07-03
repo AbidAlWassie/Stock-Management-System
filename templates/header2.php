@@ -10,7 +10,7 @@ error_reporting(0);
   <link rel="shortcut icon" href="img/package.png">
   <?php echo $table_styles ?>
   <!-- <link rel="stylesheet" href="css/table.css"> -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
   <link rel="stylesheet" href="css/nav.css">
   <!-- <link rel="stylesheet" href="css/simple-scrollbar.css">
   <script src="js/simple-scrollbar.js"></script> -->

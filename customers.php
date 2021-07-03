@@ -9,12 +9,12 @@ if (!isset($_SESSION['loggedin'])) {
 include_once "includes/user_info.php";
 
 $title = "Order";
-$order = "class='active'";
+$customers = "class='active'";
 $table_styles = "<link rel='stylesheet' href='css/table.css'>";
 $rl = "action='./toggle_s.php'";
 
 
 include_once "templates/header2.php";
 include_once "templates/nav.php";
-include_once "templates/order_template.php";
+include_once "templates/customer_template.php";
 include_once "templates/footer.php";

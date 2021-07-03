@@ -10,18 +10,59 @@
 </head>
 
 <body>
-  <form action="">
 
-    <label for="order">Order</label>
-    <input type="text">
+  <div class="order-heading">
+    <h1>Orders</h1>
+  </div>
 
-    <label for="customer">Customer</label>
-    <input type="text">
+  <div class="container">
 
-    <label for="product">Product</label>
-    <input type="text">
 
-  </form>
+    <div class="order">
+      <form action="">
+
+        <label for="order">Order</label>
+        <input type="text" value="">
+
+        <label for="customer">Select a customer:</label>
+        <select id="customer">
+          <option value="null" selected>None</option>
+
+          <?php
+          include("./connect.php");
+          error_reporting(0);
+          $query = "SELECT * FROM customer";
+          $data = mysqli_query($connect, $query);
+          $total = mysqli_num_rows($data);
+
+          if ($total != 0) {
+            while ($result = mysqli_fetch_assoc($data)) {
+              echo
+              "
+              <option value='$result[Customer_ID]'>" . $result['Customer_Name'] . " | ID: " . $result['Customer_ID'] .  " | " . $result['Location'] . "</option>
+              ";
+            }
+          } else {
+            echo "No records found";
+          }
+          ?>
+        </select>
+
+        <label for="product">Product ID</label>
+        <input type="text">
+
+        <label for="product">Quantity</label>
+        <input type="text">
+
+        <input type="submit">
+
+      </form>
+    </div>
+
+  </div>
+
+
+
 </body>
 
 </html>

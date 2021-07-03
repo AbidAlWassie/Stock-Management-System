@@ -6,4 +6,4 @@ Written in PHP, CSS, JavaScript.
 
 JavaScript at: /templates/footer.php
 
-SQL File included.
+SQL Files included.

@@ -8,7 +8,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 include_once "includes/user_info.php";
 
-$title = "Order";
+$title = "Customers";
 $customers = "class='active'";
 $table_styles = "<link rel='stylesheet' href='css/table.css'>";
 $rl = "action='./toggle_s.php'";

@@ -70,5 +70,11 @@ input.submit {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 500px;
+  font-size: 1rem;
+}
+
+select {
+  padding: 8px 6px;
+  font-size: 0.95rem;
 }
 /*# sourceMappingURL=default_styles.css.map */

@@ -13,10 +13,9 @@
   <table class="table-sortable" id="stock">
     <thead id="list-column">
       <tr>
-        <th>Name</th>
-        <th>Nickname</th>
+        <th>Customer Name</th>
         <th>Address</th>
-        <th>Phone</th>
+        <th>Phone Number</th>
         <th>ID</th>
         <th>Options</th>
       </tr>
@@ -36,7 +35,6 @@
           "
           <tr>
           <td>" . $result['Customer_Name'] . "</td>
-          <td>" . $result['Nickname'] . "</td>
           <td>" . $result['Location'] . "</td>
           <td>" . $result['Phone'] . "</td>
           <td>" . $result['Customer_ID'] . "</td>

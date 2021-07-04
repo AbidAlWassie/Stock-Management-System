@@ -2,8 +2,8 @@
 -- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Generation Time: May 18, 2021 at 07:23 PM
+-- Host: 127.0.0.1
+-- Generation Time: Jul 03, 2021 at 08:50 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -20,6 +20,44 @@ SET time_zone = "+00:00";
 --
 -- Database: `stock`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer`
+--
+
+CREATE TABLE `customer` (
+  `Customer_ID` int(128) NOT NULL,
+  `Customer_Name` varchar(50) DEFAULT NULL,
+  `Nickname` varchar(50) DEFAULT NULL,
+  `Location` varchar(50) DEFAULT NULL,
+  `Phone` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`Customer_ID`, `Customer_Name`, `Nickname`, `Location`, `Phone`) VALUES
+(1, 'Abid Al Wassie', 'Abid', 'Domar', NULL),
+(2, 'Fahmid Al Wassie', 'Fahmid', 'Domar', NULL),
+(3, 'Shumon Sayed', 'Shumon', 'Rangpur', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order`
+--
+
+CREATE TABLE `order` (
+  `Order_ID` int(128) NOT NULL,
+  `Customer_ID` int(128) DEFAULT NULL,
+  `Customer_Name` varchar(50) DEFAULT NULL,
+  `Product_ID` int(128) DEFAULT NULL,
+  `Product_Name` varchar(50) DEFAULT NULL,
+  `Date` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -42,8 +80,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`Product_ID`, `Brand`, `Product_Name`, `Color`, `Size`, `Price`, `Quantity`) VALUES
-(1, 'Berger', 'SPD', 'White', '18 liter', 520, 10),
-(2, 'Berger', 'SPD', 'Off White', '18 liter', 520, 1),
+(1, 'Berger', 'SPD', 'White', '18 liter', 520, 7),
+(2, 'Berger', 'SPD', 'Off White', '18 liter', 520, 5),
 (3, 'Berger', 'SPD', 'Ocean Blue', '18 liter', 520, 1),
 (4, 'Berger', 'SPD', 'Cream', '18 liter', 520, 1),
 (5, 'Berger', 'SPD', 'Crystal Green N', '18 liter', 520, 1),
@@ -476,6 +514,20 @@ INSERT INTO `products` (`Product_ID`, `Brand`, `Product_Name`, `Color`, `Size`, 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `customer`
+--
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`Customer_ID`),
+  ADD KEY `Key` (`Customer_Name`,`Nickname`,`Location`,`Phone`);
+
+--
+-- Indexes for table `order`
+--
+ALTER TABLE `order`
+  ADD PRIMARY KEY (`Order_ID`),
+  ADD KEY `Key` (`Customer_ID`,`Customer_Name`,`Product_ID`,`Product_Name`,`Date`);
 
 --
 -- Indexes for table `products`

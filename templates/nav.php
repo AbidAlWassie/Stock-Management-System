@@ -6,6 +6,7 @@ error_reporting(0);
   <a draggable="false" <?php echo $stock ?> href="stock.php">Stock</a>
   <a draggable="false" <?php echo $insert ?> href="insert.php">Insert</a>
   <a draggable="false" <?php echo $order ?> href="order.php">Order</a>
+  <a draggable="false" <?php echo $order_list ?> href="order_list.php">Order List</a>
   <a draggable="false" <?php echo $customers ?> href="customers.php">Customers</a>
   <a draggable="false" <?php echo $about ?> href="about.php">About</a>
   <a draggable="false" class="danger" href="delete-page.php">Delete</a>

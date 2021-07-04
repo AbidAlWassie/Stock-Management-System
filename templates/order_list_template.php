@@ -13,11 +13,12 @@
   <table class="table-sortable" id="stock">
     <thead id="list-column">
       <tr>
+        <th>Product Name</th>
+        <th>Product ID</th>
         <th>Customer Name</th>
-        <th>Nickname</th>
-        <th>Address</th>
-        <th>Phone Number</th>
-        <th>ID</th>
+        <th>Customer ID</th>
+        <th>Order ID</th>
+        <th>Date</th>
         <th>Options</th>
       </tr>
     </thead>
@@ -26,7 +27,7 @@
       <?php
       include("./connect.php");
       error_reporting(0);
-      $query = "SELECT * FROM customer";
+      $query = "SELECT * FROM order";
       $data = mysqli_query($connect, $query);
       $total = mysqli_num_rows($data);
 
@@ -35,12 +36,13 @@
           echo
           "
           <tr>
+          <td>" . $result['Product_Name'] . "</td>
+          <td>" . $result['Product_ID'] . "</td>
           <td>" . $result['Customer_Name'] . "</td>
-          <td>" . $result['Nickname'] . "</td>
-          <td>" . $result['Location'] . "</td>
-          <td>" . $result['Phone'] . "</td>
           <td>" . $result['Customer_ID'] . "</td>
-          <td><a href='modify_customer.php?cname=$result[Customer_Name]&nickname=$result[Nickname]&location=$result[Location]&phone=$result[Phone]&cid=$result[Customer_ID]' class='btnModify'>Modify</td>
+          <td>" . $result['Order_ID'] . "</td>
+          <td>" . $result['Date'] . "</td>
+          <td><a href='modify_orders.php?cname=$result[Customer_Name]&cid=$result[Customer_ID]&oid=$result[Order_ID]&cname=$result[Customer_Name]' class='btnModify'>Modify</td>
           </tr>
           ";
         }

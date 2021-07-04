@@ -5,7 +5,7 @@
 </nav>
 
 <header>
-  <h1>Update your entry</h1>
+  <h1>Update Customer Details</h1>
 </header>
 
 <form action="" method="GET">

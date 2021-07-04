@@ -5,11 +5,11 @@
 </nav>
 
 <header>
-  <h1>Update your entry</h1>
+  <h1>Update Product Details</h1>
 </header>
 
-  <form action="" method="GET">
-    <table id="table1" class="form-table <?php echo $theme ?>">
+<form action="" method="GET">
+  <table id="table1" class="form-table <?php echo $theme ?>">
 
     <tr>
       <td class="label">Product ID</td>
@@ -46,13 +46,14 @@
       <td class="input"><input type="text" value="<?php echo "$quantity" ?>" name="quantity" placeholder="Quantity"></td>
     </tr>
 
-    
+
 
     <tr>
       <td colspan="2"><a class="btnSubmit" href="stock.php"><input id="btnSubmit" type="submit" name="submit"></a></td>
     </tr>
-    
-    </table>
-  </form>
+
+  </table>
+</form>
 </body>
+
 </html>

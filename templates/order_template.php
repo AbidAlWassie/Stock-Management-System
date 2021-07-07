@@ -24,7 +24,8 @@
         <input type="text" value="">
 
         <label for="customer">Select a customer:</label>
-        <select id="customer">
+        <input list="customer" type="text">
+        <datalist id="customer">
           <option value="null" selected>None</option>
 
           <?php
@@ -38,17 +39,39 @@
             while ($result = mysqli_fetch_assoc($data)) {
               echo
               "
-              <option value='$result[Customer_ID]'>" . $result['Customer_Name'] . " | ID: " . $result['Customer_ID'] .  " | " . $result['Location'] . "</option>
+              <option value='$result[Customer_ID]'>" . $result['Customer_Name'] . " | Address: "  . $result['Location'] . " | ID: " .  $result['Customer_ID'] .   "</option>
               ";
             }
           } else {
             echo "No records found";
           }
           ?>
-        </select>
+        </datalist>
 
         <label for="product">Product ID</label>
-        <input type="text">
+        <input list="product" type="text">
+        <datalist id="product">
+          <option value="null" selected>None</option>
+
+          <?php
+          include("./connect.php");
+          error_reporting(0);
+          $query = "SELECT * FROM products";
+          $data = mysqli_query($connect, $query);
+          $total = mysqli_num_rows($data);
+
+          if ($total != 0) {
+            while ($result = mysqli_fetch_assoc($data)) {
+              echo
+              "
+              <option value='$result[Product_ID]'>"  . $result['Brand'] . " | Name: "  . $result['Product_Name'] . " | Color: " .  $result['Color'] . " | Size: " .  $result['Size'] .  " | Quantity: " .  $result['Quantity']  . "</option>
+              ";
+            }
+          } else {
+            echo "No records found";
+          }
+          ?>
+        </datalist>
 
         <label for="product">Quantity</label>
         <input type="text">

@@ -20,11 +20,11 @@
     <div class="order">
       <form action="">
 
-        <label for="order">Order</label>
-        <input type="text" value="">
+        <!-- <label for="order">Order</label>
+        <input type="text" value=""> -->
 
         <label for="customer">Select a customer:</label>
-        <input list="customer" type="text">
+        <input list="customer" type="text" name="customer">
         <datalist id="customer">
           <option value="null" selected>None</option>
 
@@ -53,7 +53,7 @@
           <div class="order-item hide">
             <h4>Item 1</h4>
             <label for="product">Product ID</label>
-            <input list="product" type="text" class="half">
+            <input list="product" type="text" class="half" name="product_1">
             <datalist id="product">
               <option value="null" selected>None</option>
 
@@ -78,7 +78,7 @@
             </datalist>
 
             <label for="product">Quantity</label>
-            <input type="text" class="half">
+            <input type="text" class="half" name="amount_1">
           </div>
 
         </div>

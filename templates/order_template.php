@@ -48,33 +48,42 @@
           ?>
         </datalist>
 
-        <label for="product">Product ID</label>
-        <input list="product" type="text">
-        <datalist id="product">
-          <option value="null" selected>None</option>
+        <div class="orders-added">
 
-          <?php
-          include("./connect.php");
-          error_reporting(0);
-          $query = "SELECT * FROM products";
-          $data = mysqli_query($connect, $query);
-          $total = mysqli_num_rows($data);
+          <div class="order-item hide">
+            <h4>Item 1</h4>
+            <label for="product">Product ID</label>
+            <input list="product" type="text" class="half">
+            <datalist id="product">
+              <option value="null" selected>None</option>
 
-          if ($total != 0) {
-            while ($result = mysqli_fetch_assoc($data)) {
-              echo
-              "
+              <?php
+              include("./connect.php");
+              error_reporting(0);
+              $query = "SELECT * FROM products";
+              $data = mysqli_query($connect, $query);
+              $total = mysqli_num_rows($data);
+
+              if ($total != 0) {
+                while ($result = mysqli_fetch_assoc($data)) {
+                  echo
+                  "
               <option value='$result[Product_ID]'>"  . $result['Brand'] . " | Name: "  . $result['Product_Name'] . " | Color: " .  $result['Color'] . " | Size: " .  $result['Size'] .  " | Quantity: " .  $result['Quantity']  . "</option>
               ";
-            }
-          } else {
-            echo "No records found";
-          }
-          ?>
-        </datalist>
+                }
+              } else {
+                echo "No records found";
+              }
+              ?>
+            </datalist>
 
-        <label for="product">Quantity</label>
-        <input type="text">
+            <label for="product">Quantity</label>
+            <input type="text" class="half">
+          </div>
+
+        </div>
+
+        <button type="reset" class="add" onclick="addItem()">Add Item</button>
 
         <input type="submit">
 
@@ -83,7 +92,12 @@
 
   </div>
 
-
+  <script>
+    function addItem() {
+      const hidden = document.querySelector(".hide");
+      hidden.classList.remove("hide");
+    }
+  </script>
 
 </body>
 

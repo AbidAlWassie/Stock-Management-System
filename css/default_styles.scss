@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  // margin: auto;
+  // margin: 20px 200px;
   display: flex;
   justify-content: center;
   // flex-direction: column;
@@ -64,7 +64,7 @@ input.submit {
 .order form {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 100%;
   font-size: 1rem;
 }
 
@@ -75,4 +75,43 @@ select {
 
 option {
   padding: 10px;
+}
+
+.order {
+  // width: 100%;
+}
+
+.order-item {
+  border: 2px solid #5b75eb;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.order-item h4 {
+  background: #5b75eb;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-top: 0;
+}
+
+.order-item label {
+  margin-left: 5px;
+}
+
+.order {
+  width: 520px;
+}
+
+input.half {
+  // width: 50%;
+  // margin-bottom: 0;
+}
+
+// .orders-added {
+//   display: flex;
+// }
+
+.hide {
+  display: none;
+  // visibility: hidden;
 }

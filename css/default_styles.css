@@ -69,12 +69,41 @@ input.submit {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 500px;
+  width: 100%;
   font-size: 1rem;
 }
 
 select {
   padding: 8px 6px;
   font-size: 0.95rem;
+}
+
+option {
+  padding: 10px;
+}
+
+.order-item {
+  border: 2px solid #5b75eb;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.order-item h4 {
+  background: #5b75eb;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-top: 0;
+}
+
+.order-item label {
+  margin-left: 5px;
+}
+
+.order {
+  width: 520px;
+}
+
+.hide {
+  display: none;
 }
 /*# sourceMappingURL=default_styles.css.map */

@@ -45,8 +45,8 @@ if (isset($_POST['submit'])) {
   $amount_9 = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['amount_9']));
   $amount_10 = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['amount_10']));
 
-  if ($id != "" && $brand != "" && $product != "" && $color != "" && $size != "" && $price && $quantity != "") {
-    $query = "INSERT INTO products VALUES ('$id', '$brand', '$product', '$color', '$size', '$price', '$quantity')";
+  if ($customer != "" && $product_1 != "" && $amount_1 != "") {
+    $query = "INSERT INTO order VALUES ('$customer', '$product_1', '$amount_1', '$product_2', '$amount_2', '$product_3', '$amount_3')";
     $data = mysqli_query($connect, $query);
 
     if ($data) {

@@ -18,7 +18,7 @@
 
 
     <div class="order">
-      <form action="">
+      <form action="" method="POST">
 
         <!-- <label for="order">Order</label>
         <input type="text" value=""> -->
@@ -85,7 +85,7 @@
 
         <button type="reset" class="add" onclick="addItem()">Add Item</button>
 
-        <input type="submit">
+        <input type="submit" name="submit">
 
       </form>
     </div>

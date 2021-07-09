@@ -18,7 +18,7 @@
 
 
     <div class="order">
-      <form action="" method="POST">
+      <form method="GET">
 
         <!-- <label for="order">Order</label>
         <input type="text" value=""> -->
@@ -83,17 +83,20 @@
 
         </div>
 
-        <button type="reset" class="add" onclick="addItem()">Add Item</button>
+        <button type="button" class="add" onclick="return addItem()">Add Item</button>
 
-        <input type="submit" name="submit">
+        <input type="submit" name="osubmit" value="osubmit">
 
       </form>
     </div>
 
   </div>
 
+
+
   <script>
     function addItem() {
+      // return undefined;
       const hidden = document.querySelector(".hide");
       hidden.classList.remove("hide");
     }

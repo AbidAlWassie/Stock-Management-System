@@ -23,7 +23,7 @@ include("connect.php");
 error_reporting(0);
 
 if (isset($_POST['submit'])) {
-  $customer = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['customer']));
+  $customer_id = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['customer']));
   $product_1 = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['product_1']));
   $product_2 = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['product_2']));
   $product_3 = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['product_3']));
@@ -45,8 +45,8 @@ if (isset($_POST['submit'])) {
   $amount_9 = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['amount_9']));
   $amount_10 = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['amount_10']));
 
-  if ($customer != "" && $product_1 != "" && $amount_1 != "") {
-    $query = "INSERT INTO order VALUES ('$customer', '$product_1', '$amount_1', '$product_2', '$amount_2', '$product_3', '$amount_3')";
+  if ($customer != "") {
+    $query = "INSERT INTO order VALUES ('$customer_id', '$product_1', '$amount_1')";
     $data = mysqli_query($connect, $query);
 
     if ($data) {

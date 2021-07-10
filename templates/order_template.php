@@ -18,13 +18,13 @@
 
 
     <div class="order">
-      <form method="GET">
+      <form method="POST">
 
         <!-- <label for="order">Order</label>
         <input type="text" value=""> -->
 
         <label for="customer">Select a customer:</label>
-        <input list="customer" type="text" name="customer">
+        <input list="customer" type="text" name="customer_id">
         <datalist id="customer">
           <option value="null" selected>None</option>
 
@@ -83,9 +83,9 @@
 
         </div>
 
-        <button type="button" class="add" onclick="return addItem()">Add Item</button>
+        <button type="button" class="add" onclick="addItem()">Add Item</button>
 
-        <input type="submit" name="osubmit" value="osubmit">
+        <input type="submit" name="submit" value="submit">
 
       </form>
     </div>

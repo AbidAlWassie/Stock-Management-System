@@ -1,6 +1,5 @@
 <?php
 session_start();
-// Check if the user isn't logged in then redirect to the index page
 if (!isset($_SESSION['loggedin'])) {
   header('Location: index.html');
   exit;
@@ -22,8 +21,8 @@ include_once "templates/footer.php";
 include("connect.php");
 error_reporting(0);
 
-if (isset($_POST['osubmit'])) {
-  $customer_id = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['customer']));
+if (isset($_POST['submit'])) {
+  $customer_id = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['customer_id']));
   $product_1 = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['product_1']));
   $amount_1 = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['amount_1']));
   $product_2 = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['product_2']));
@@ -45,15 +44,15 @@ if (isset($_POST['osubmit'])) {
   $product_10 = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['product_10']));
   $amount_10 = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['amount_10']));
 
-  if ($customer_id != "" && $product_1 != "" && $amount_1 != "") {
-    $query = "INSERT INTO order ('Order_ID', 'Customer_ID', 'Product_1', 'Amount_1', 'Product_2', 'Amount_2', 'Product_3', 'Amount_3', 'Product_4', 'Amount_4', 'Product_5', 'Amount_5', 'Product_6', 'Amount_6', 'Product_7', 'Amount_7', 'Product_8', 'Amount_8', 'Product_9', 'Amount_9', 'Product_10', 'Amount_10', 'Date') VALUES (NULL, '$customer_id', '$product_1', '$amount_1', $product_2, $amount_2, $product_3, $amount_3, $product_4, $amount_4, $product_5, $amount_5, $product_6, $amount_6, $product_7, $amount_7, $product_8, $amount_8, $product_9, $amount_9, $product_10, $amount_10, NULL);";
+  // if ($customer_id != "" && $product_1 != "" && $amount_1 != "") {
+  $query = "INSERT INTO `order` (`Order_ID`, `Customer_ID`, `Product_1`, `Amount_1`, `Product_2`, `Amount_2`, `Product_3`, `Amount_3`, `Product_4`, `Amount_4`, `Product_5`, `Amount_5`, `Product_6`, `Amount_6`, `Product_7`, `Amount_7`, `Product_8`, `Amount_8`, `Product_9`, `Amount_9`, `Product_10`, `Amount_10`, `Date`) VALUES (NULL, '$customer_id', '$product_1', '$amount_1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, Null);";
 
-    $data = mysqli_query($connect, $query);
+  $data = mysqli_query($connect, $query);
 
-    if ($data) {
-      echo "Data inserted into the Database";
-    } else {
-      echo "couldn't execute " + $query;
-    }
-  }
+  // if ($data) {
+  //   echo "Data inserted into the Database";
+  // } else {
+  //   echo "couldn't execute " + $query;
+  // }
+  // }
 }

@@ -30,10 +30,23 @@ input {
   outline: none;
 }
 
+button.add {
+  cursor: pointer;
+  padding: 5px;
+  font-size: 20px;
+}
+
 input[type="submit"] {
   padding: 0.7rem 1.3rem;
   border: 0;
-  margin-top: 5px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: rgb(80, 80, 80);
 }
 
 input[type="text"] {

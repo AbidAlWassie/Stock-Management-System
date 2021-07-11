@@ -10,7 +10,7 @@ include_once "includes/user_info.php";
 
 $title = "Order";
 $order_list = "class='active'";
-$table_styles = "<link rel='stylesheet' href='css/table.css'>";
+$table_styles = "<link rel='stylesheet' href='css/default_styles.css'>";
 $rl = "action='./toggle_s.php'";
 
 

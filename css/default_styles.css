@@ -119,4 +119,19 @@ option {
 .hide {
   display: none;
 }
+
+.purchase-list {
+  list-style-type: none;
+}
+
+.purchase-list li {
+  text-decoration: none;
+  background-color: #303b6e;
+  padding: 5px 12px;
+}
+
+.purchase-list li span.value {
+  float: right;
+  margin-right: 50px;
+}
 /*# sourceMappingURL=default_styles.css.map */

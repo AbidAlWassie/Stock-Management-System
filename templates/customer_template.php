@@ -1,39 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<table class="table-sortable" id="stock">
+  <thead id="list-column">
+    <tr>
+      <th>Customer Name</th>
+      <th>Nickname</th>
+      <th>Address</th>
+      <th>Phone Number</th>
+      <th>ID</th>
+      <th>Options</th>
+    </tr>
+  </thead>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/default_styles.css">
-</head>
+  <tbody id="root-stock" class="list-items <?php echo $theme ?>">
+    <?php
+    include("./connect.php");
+    error_reporting(0);
+    $query = "SELECT * FROM customer";
+    $data = mysqli_query($connect, $query);
+    $total = mysqli_num_rows($data);
 
-<body>
-
-  <table class="table-sortable" id="stock">
-    <thead id="list-column">
-      <tr>
-        <th>Customer Name</th>
-        <th>Nickname</th>
-        <th>Address</th>
-        <th>Phone Number</th>
-        <th>ID</th>
-        <th>Options</th>
-      </tr>
-    </thead>
-
-    <tbody id="root-stock" class="list-items <?php echo $theme ?>">
-      <?php
-      include("./connect.php");
-      error_reporting(0);
-      $query = "SELECT * FROM customer";
-      $data = mysqli_query($connect, $query);
-      $total = mysqli_num_rows($data);
-
-      if ($total != 0) {
-        while ($result = mysqli_fetch_assoc($data)) {
-          echo
-          "
+    if ($total != 0) {
+      while ($result = mysqli_fetch_assoc($data)) {
+        echo
+        "
           <tr>
           <td>" . $result['Customer_Name'] . "</td>
           <td>" . $result['Nickname'] . "</td>
@@ -43,15 +31,15 @@
           <td><a href='modify_customer.php?cname=$result[Customer_Name]&nickname=$result[Nickname]&location=$result[Location]&phone=$result[Phone]&cid=$result[Customer_ID]' class='btnModify'>Modify</td>
           </tr>
           ";
-        }
-      } else {
-        echo "No records found";
       }
-      ?>
+    } else {
+      echo "No records found";
+    }
+    ?>
 
-    </tbody>
+  </tbody>
 
-    <!-- <tfoot>
+  <!-- <tfoot>
       <tr>
         <th></th>
         <th></th>
@@ -61,8 +49,4 @@
         <th colspan="2"></th>
       </tr>
     </tfoot> -->
-  </table>
-
-</body>
-
-</html>
+</table>

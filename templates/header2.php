@@ -1,8 +1,9 @@
+<!DOCTYPE html>
+<html class="<?php echo $theme ?>">
+
 <?php
 error_reporting(0);
 ?>
-<!DOCTYPE html>
-<html class="<?php echo $theme ?>">
 
 <head>
   <meta charset="UTF-8">
@@ -11,6 +12,7 @@ error_reporting(0);
   <?php echo $table_styles ?>
   <!-- <link rel="stylesheet" href="css/table.css"> -->
   <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/default_styles.css">
   <link rel="stylesheet" href="css/nav.css">
   <!-- <link rel="stylesheet" href="css/simple-scrollbar.css">
   <script src="js/simple-scrollbar.js"></script> -->

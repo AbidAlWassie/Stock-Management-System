@@ -18,5 +18,3 @@ include_once "templates/header.php";
 include_once "templates/nav.php";
 include_once "templates/main.php";
 include_once "templates/footer.php";
-
-?>

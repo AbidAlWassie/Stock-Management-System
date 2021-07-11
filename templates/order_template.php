@@ -50,12 +50,13 @@
 
         <div class="orders-added">
 
+          <!-- 1 -->
           <div class="order-item hide">
             <h4>Item 1</h4>
             <label for="product">Product ID</label>
             <input list="product" type="text" class="half" name="product_1">
             <datalist id="product">
-              <option value="null" selected>None</option>
+              <option selected>None</option>
 
               <?php
               include("./connect.php");
@@ -80,6 +81,39 @@
             <label for="product">Quantity</label>
             <input type="text" class="half" name="amount_1">
           </div>
+
+          <!-- 2 -->
+          <div class="order-item hide">
+            <h4>Item 2</h4>
+            <label for="product">Product ID</label>
+            <input list="product" type="text" class="half" name="product_2">
+            <datalist id="product">
+              <option selected>None</option>
+
+              <?php
+              include("./connect.php");
+              error_reporting(0);
+              $query = "SELECT * FROM products";
+              $data = mysqli_query($connect, $query);
+              $total = mysqli_num_rows($data);
+
+              if ($total != 0) {
+                while ($result = mysqli_fetch_assoc($data)) {
+                  echo
+                  "
+              <option value='$result[Product_ID]'>"  . $result['Brand'] . " | Name: "  . $result['Product_Name'] . " | Color: " .  $result['Color'] . " | Size: " .  $result['Size'] .  " | Quantity: " .  $result['Quantity']  . "</option>
+              ";
+                }
+              } else {
+                echo "No records found";
+              }
+              ?>
+            </datalist>
+
+            <label for="product">Quantity</label>
+            <input type="text" class="half" name="amount_2">
+          </div>
+
 
         </div>
 

@@ -4,7 +4,7 @@ It's a fully functional simple Stock Management System. Still a work in progress
 
 Written in PHP, CSS, JavaScript.
 
-JavaScript at: 
+JavaScript Code at: 
 
      /templates/footer.php
      /templates/footer2.php

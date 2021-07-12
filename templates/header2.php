@@ -14,6 +14,7 @@ error_reporting(0);
   <!-- <link rel="stylesheet" href="css/style.css"> -->
   <link rel="stylesheet" href="css/default_styles.css">
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- <link rel="stylesheet" href="css/simple-scrollbar.css">
   <script src="js/simple-scrollbar.js"></script> -->
   <?php echo $form_styles ?>

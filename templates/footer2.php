@@ -14,18 +14,28 @@
     e = item[2].textContent;
     f = times[2].textContent;
 
-    console.log(a);
-    console.log(b);
+    g = item[3].textContent;
+    h = times[3].textContent;
 
-    console.log(c);
-    console.log(d);
+    i = item[4].textContent;
+    j = times[4].textContent;
 
-    console.log(e);
-    console.log(f);
+    console.log(i);
+    console.log(j);
 
-    console.log(a * b);
-    console.log(c * d);
-    console.log(e * f);
+    // console.log(a);
+    // console.log(b);
+
+    // console.log(c);
+    // console.log(d);
+
+    // console.log(e);
+    // console.log(f);
+
+    // console.log(a * b);
+    // console.log(c * d);
+    // console.log(e * f);
+
   }
 </script>
 

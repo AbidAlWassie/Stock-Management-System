@@ -134,4 +134,9 @@ option {
   float: right;
   margin-right: 50px;
 }
+
+.purchase-list li span.value.num {
+  display: inline;
+  width: 80%;
+}
 /*# sourceMappingURL=default_styles.css.map */

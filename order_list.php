@@ -17,4 +17,4 @@ $rl = "action='./toggle_s.php'";
 include_once "templates/header2.php";
 include_once "templates/nav.php";
 include_once "templates/order_list_template.php";
-include_once "templates/footer.php";
+include_once "templates/footer2.php";

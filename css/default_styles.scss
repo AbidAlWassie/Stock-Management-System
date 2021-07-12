@@ -139,6 +139,7 @@ input.half {
   text-decoration: none;
   background-color: #303b6e;
   padding: 5px 12px;
+  // display: flex;
 }
 
 .purchase-list li span.value {
@@ -147,6 +148,10 @@ input.half {
 }
 
 .purchase-list li span.value.num {
-  display: inline;
-  width: 80%;
+  // display: flex;
+  // flex-direction: row;
+  // width: 80%;
 }
+
+// .purchase-list li span.value.num {
+// }

@@ -11,8 +11,9 @@
       echo
       "
           <ul class='purchase-list'>
-          <li> Order Id <span class='value'>" . $result['Order_ID'] . "</span></li>
-          <li> Customer Id <span class='value'>" . $result['Customer_ID'] . "</span></li>
+          <li> Order ID <span class='value'>" . $result['Order_ID'] . "</span></li>
+          <li> Customer ID <span class='value'>" . $result['Customer_ID'] . "</span></li>
+          <li> Customer Name <span class='value'>" . $result['Customer_Name'] . "</span></li>
           <li> Item_1 <span class='value num item'>" . $result['Product_1'] . "</span></li>
           <li> Amount <span class='value num times'>" . $result['Amount_1'] . "</span></li>
           <li> Item_2 <span class='value num item'>" . $result['Product_2'] . "</span></li>

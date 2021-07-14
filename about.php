@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,29 +50,32 @@
   </style>
   <link rel="shortcut icon" href="img/dollar.png">
 </head>
+
 <body>
 
-<?php
+  <?php
 
-include_once "includes/user_info.php";
-$rl = "action='./toggle_a.php'";
+  include_once "includes/user_info.php";
+  $rl = "action='./toggle_a.php'";
 
-$about = "class='active'";
-include_once "templates/nav.php";
+  $about = "class='active'";
+  include_once "templates/nav.php";
 
-?>
+  ?>
 
   <div class="container">
     <h1>About</h1>
-    <p>Created by <a href="https://github.com/AbidAlWassie/">Abid Al Wassie</a></p>
-    <p>Email: <a href="mailto:abidalwassie@outlook.com">abidalwassie@outlook.com</a></p>
-    <p>Site: <a href="http://abidalwassie.netlify.app/">abidalwassie.netlify.app</a></p>
+    <p>Created by<a href="https://github.com/AbidAlWassie/" target="_blank">Abid Al Wassie</a></p>
+    <p>Email:<a href="mailto:abidalwassie@outlook.com" target="_blank">abidalwassie@outlook.com</a></p>
+    <p>Site:<a href="http://abidalwassie.netlify.app/" target="_blank">abidalwassie.netlify.app</a></p>
+    <p>Copyright ©2021 All rights reserved | This website was made by<a href="https://github.com/AbidAlWassie/" target="_blank">Abid Al Wassie</a></p>
   </div>
 </body>
-<?php 
+<?php
 error_reporting(0);
-function getUserIp() {
-  if(!empty($_SERVER['HTTP_CLIENT_IP'])) {
+function getUserIp()
+{
+  if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
     $ip_addr = $_SERVER['HTTP_CLIENT_IP'];
   } else if (!empty($ip_addr = $_SERVER['HTTP_FORWARDED_FOR'])) {
     $ip_addr = $_SERVER['HTTP_FORWARDED_FOR'];
@@ -86,5 +90,5 @@ $ip = getUserIp();
 echo $ip;
 
 ?>
-</html>
 
+</html>

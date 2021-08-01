@@ -3,8 +3,8 @@ $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
 $DATABASE_NAME = 'phplogin';
-$DATABASE_PORT = '3306';
-$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME, $DATABASE_PORT);
+// $DATABASE_PORT = '3306';
+$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
@@ -16,5 +16,3 @@ $stmt->execute();
 $stmt->bind_result($password, $email, $theme);
 $stmt->fetch();
 $stmt->close();
-
-?>
